@@ -20,7 +20,7 @@ export default function Projects({ portfolioItems }) {
           <title>Nancy's Portfolio</title>
         </Head>
       <main className="max-w-4xl mx-auto mt-16 antialiased">
-      <div>
+      <div className="grid grid-cols-2">
       {
         portfolioItems?.map(item => (
           <div key={item.slug}>

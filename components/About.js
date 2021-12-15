@@ -12,7 +12,7 @@ const About = () => {
                     </h1>
                     <div className="mt-6 text-gray-800 dark:text-white">
                         <p className="mb-4 font-mono">
-                        A <b>UBC Computer Science and Statistics</b> graduate and a current <b>Master of Digital Media</b> student at <b>Centre for Digital Media</b> with a strong passion in web development, machine learning and computer graphics.
+                        A <b>UBC Computer Science and Statistics</b> graduate and a current <b>Master of Digital Media</b> student at <b>Centre for Digital Media</b>. My areas of interest include Computer Vision, Graphics, and Mixed Reality.
                         </p>
                     </div>
                 </div>
