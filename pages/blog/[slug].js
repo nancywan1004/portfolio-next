@@ -2,7 +2,8 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { getPost } from "../../lib/data";
-//import markdownToHtml from '../../lib/markdownToHtml'
+import markdownToHtml from '../../lib/markdownToHtml';
+import parse from 'html-react-parser';
 
 export async function getStaticPaths() {
   return {
@@ -13,15 +14,16 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const postItem = await getPost(params.slug);
-  //const content = await markdownToHtml(postItem[0].content || '');
+  const content = await markdownToHtml(postItem[0].content || '');
   return {
     props: {
-      postItem: postItem[0]
+      postItem: postItem[0],
+      postContent: content
     },
   };
 }
 
-export default function Home({ postItem }) {
+export default function Home({ postItem, postContent }) {
   const router = useRouter();
   // console.log(postItem)
   if (!router.isFallback && !postItem?.slug) {
@@ -40,7 +42,8 @@ export default function Home({ postItem }) {
       <main className="max-w-4xl mx-auto mt-16 antialiased">
         <div>
           <h1>{postItem.title}</h1>
-          <span>{postItem.content}</span>
+          <h2>{postItem.date}</h2>
+          <div>{parse(postContent)}</div>
         </div>
       </main>
     </div>
