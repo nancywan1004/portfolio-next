@@ -1,6 +1,8 @@
 import React from "react"
 import Image from "next/image"
 import profile from "../public/profile.jpg"
+import Skills from "./Skills";
+import Link from 'next/link';
 
 const About = () => {
     return (
@@ -12,9 +14,20 @@ const About = () => {
                     </h1>
                     <div className="mt-6 text-gray-800 dark:text-white">
                         <p className="mb-4 font-mono">
-                        A <b>UBC Computer Science and Statistics</b> graduate and a current <b>Master of Digital Media</b> student at <b>Centre for Digital Media</b>. My areas of interest include Computer Vision, Graphics, and Mixed Reality.
+                        A UBC Computer Science and Statistics graduate and a current Master of Digital Media student at Centre for Digital Media. A hardcore <b>Web Developer</b> sneaking into <b>Computer Vision</b> and <b>Mixed Reality</b> industries.
                         </p>
                     </div>
+                    <div className="mt-20">
+                        <Link href="/projects">
+                            <a class="text-blue-600 dark:text-white hover:underline">Go to Projects</a>
+                        </Link>
+                    </div>
+                    <div className="mt-10">
+                        <Link href="/blog">
+                            <a class="text-blue-600 dark:text-white hover:underline">Go to Blog</a>
+                        </Link>
+                    </div>
+
                 </div>
                 <div className="flex-shrink-0 lg:mt-12 lg:px-4 mb-10">
                     <Image
@@ -25,6 +38,9 @@ const About = () => {
                         width={250}
                         height={250}
                         placeholder="blur"
+                    />
+                    <Skills 
+                    
                     />
                 </div>
             </div>

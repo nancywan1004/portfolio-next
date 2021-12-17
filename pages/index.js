@@ -13,7 +13,7 @@ export default function Home() {
 
     <main className="max-w-4xl mx-auto mt-16 antialiased">
       <About/>
-      <div className="lg:px-4 lg:mt-12">
+      {/* <div className="lg:px-4 lg:mt-12">
         <Link href="/projects">
           <a class="text-blue-600 hover:underline">Go to Projects</a>
         </Link>
@@ -22,7 +22,7 @@ export default function Home() {
         <Link href="/blog">
           <a class="text-blue-600 hover:underline">Go to Blog</a>
         </Link>
-      </div>
+      </div> */}
     </main>
   </div>
   )
