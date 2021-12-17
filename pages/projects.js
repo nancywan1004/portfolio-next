@@ -19,8 +19,8 @@ export default function Projects({ portfolioItems }) {
         <Head>
           <title>Nancy's Portfolio</title>
         </Head>
-      <main className="max-w-4xl mx-auto mt-16 antialiased">
-      <div className="grid grid-cols-2">
+      <main className="max-w-2xl mx-auto mt-16 antialiased">
+      <div className="grid gap-4 grid-cols-2">
       {
         portfolioItems?.map(item => (
           <div key={item.slug}>
@@ -32,6 +32,8 @@ export default function Projects({ portfolioItems }) {
             tags={item.tags}
             coverImage={item.coverImage}
             url={item.url}
+            startDate={item.startDate}
+            endDate={item.endDate}
             />
             {/* </a> */}
           </div>
