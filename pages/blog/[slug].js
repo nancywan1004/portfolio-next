@@ -40,7 +40,7 @@ export default function Home({ postItem, postContent }) {
       </Head>
 
       <main className="max-w-4xl mx-auto mt-16 antialiased">
-        <div>
+        <div class="text-black dark:text-white">
           <h1>{postItem.title}</h1>
           <h2>{postItem.date}</h2>
           <div>{parse(postContent)}</div>

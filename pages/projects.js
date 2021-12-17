@@ -24,14 +24,16 @@ export default function Projects({ portfolioItems }) {
       {
         portfolioItems?.map(item => (
           <div key={item.slug}>
-            <a href={item.url}>
+            {/* <a href={item.url}> */}
             <ProjectCard
             title={item.title}
             description={item.description}
+            content={item.content}
             tags={item.tags}
             coverImage={item.coverImage}
+            url={item.url}
             />
-            </a>
+            {/* </a> */}
           </div>
         ))
       }
