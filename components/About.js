@@ -14,7 +14,7 @@ const About = () => {
                     </h1>
                     <div className="mt-6 text-gray-800 dark:text-white">
                         <p className="mb-4 font-mono">
-                        A UBC Computer Science and Statistics graduate and a current Master of Digital Media student at Centre for Digital Media. A hardcore <b>Web Developer</b> sneaking into <b>Computer Vision</b> and <b>Mixed Reality</b> industries.
+                        A UBC Computer Science and Statistics graduate and a current Master of Digital Media student at Centre for Digital Media. A hardcore <b>Web Developer</b> sneaking into <b>Computer Vision</b> and <b>Extended Reality</b> areas hoping to create tools to make development much easier.
                         </p>
                     </div>
                     <div className="mt-20">
@@ -29,7 +29,7 @@ const About = () => {
                     </div>
 
                 </div>
-                <div className="flex-shrink-0 lg:mt-12 lg:px-4 mb-10">
+                <div className="flex shrink-0 flex-col items-center lg:mt-12 lg:px-4 mb-10">
                     <Image
                         src={profile}
                         alt="Profile"
