@@ -11,7 +11,7 @@
     "graphql": "^15.5.3",
     "graphql-request": "^3.5.0",
     "gray-matter": "^4.0.3",
-    "html-react-parser": "^1.4.3",
+    "html-react-parser": "^1.4.4",
     "next": "latest",
     "next-themes": "^0.0.15",
     "path": "^0.12.7",

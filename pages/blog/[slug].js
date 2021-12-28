@@ -25,6 +25,12 @@ export async function getStaticProps({ params }) {
 
 export default function Home({ postItem, postContent }) {
   const router = useRouter();
+  let postContentJSX = parse(postContent);
+  // if (Array.isArray(postContentJSX)) {
+  //   postContentJSX.forEach((elem) => {
+  //     console.log(elem)
+  //   })
+  // }
   // console.log(postItem)
   if (!router.isFallback && !postItem?.slug) {
     return <ErrorPage statusCode={404} />
@@ -41,9 +47,9 @@ export default function Home({ postItem, postContent }) {
 
       <main className="max-w-4xl mx-auto mt-16 antialiased">
         <div class="text-black dark:text-white">
-          <h1>{postItem.title}</h1>
-          <h2>{postItem.date}</h2>
-          <div>{parse(postContent)}</div>
+          <h1 className="font-bold">{postItem.title}</h1>
+          <h2 className="italic">{postItem.date}</h2>
+          <div>{postContentJSX}</div>
         </div>
       </main>
     </div>
