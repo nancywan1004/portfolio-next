@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "all": "^0.0.0",
     "daisyui": "^1.16.6",
     "date-fns": "^2.24.0",
     "graphql": "^15.5.3",
