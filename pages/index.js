@@ -13,16 +13,6 @@ export default function Home() {
 
     <main className="max-w-4xl mx-auto mt-16 antialiased">
       <About/>
-      {/* <div className="lg:px-4 lg:mt-12">
-        <Link href="/projects">
-          <a class="text-blue-600 hover:underline">Go to Projects</a>
-        </Link>
-      </div>
-      <div className="mt-10 lg:px-4 lg:mt-12">
-        <Link href="/blog">
-          <a class="text-blue-600 hover:underline">Go to Blog</a>
-        </Link>
-      </div> */}
     </main>
   </div>
   )
