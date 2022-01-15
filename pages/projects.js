@@ -1,7 +1,9 @@
+import React from "react";
 import ProjectCard from '../components/ProjectCard'
 import Link from 'next/link'
 import { getPortfolioItems } from "../lib/data";
 import Head from 'next/head'
+import { useElementOnScreen } from '../lib/customHooks';
 
 export async function getStaticProps() {
     const portfolioItems = await getPortfolioItems();
@@ -13,7 +15,14 @@ export async function getStaticProps() {
 }
 
 export default function Projects({ portfolioItems }) {
-    console.log(portfolioItems)
+    //console.log(portfolioItems)
+
+    const [ containerRef ] = useElementOnScreen({
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.25
+    })  
+
     return (
       <div className="space-y-14 lg:space-y-24">
         <Head>
@@ -23,7 +32,7 @@ export default function Projects({ portfolioItems }) {
       <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
       {
         portfolioItems?.map(item => (
-          <div key={item.slug}>
+          <div ref={containerRef} key={item.slug} className="animate-fadeIn">
             {/* <a href={item.url}> */}
             <ProjectCard
             title={item.title}

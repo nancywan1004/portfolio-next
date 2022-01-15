@@ -1,7 +1,8 @@
 import PostCard from '../../components/PostCard'
 import Link from 'next/link'
 import { getPosts } from "../../lib/data";
-import Head from 'next/head'
+import Head from 'next/head';
+import { useElementOnScreen } from '../../lib/customHooks';
 
 export async function getStaticProps() {
     const postItems = await getPosts();
@@ -15,6 +16,12 @@ export async function getStaticProps() {
 
 export default function Posts({ postItems }) {
     // console.log(postItems)
+    const [ containerRef ] = useElementOnScreen({
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.25
+    })
+
     return (
       <div className="space-y-14 lg:space-y-24">
         <Head>
@@ -24,7 +31,7 @@ export default function Posts({ postItems }) {
       <div>
       {
         postItems?.map(item => (
-          <div key={item.slug}>
+          <div ref={containerRef} key={item.slug}>
             <Link href={`/blog/${item.slug}`} passHref>
                 <PostCard
                 title={item.title}
