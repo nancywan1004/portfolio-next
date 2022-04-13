@@ -4,7 +4,7 @@ import VideoDemo from './VideoDemo';
 
 const ProjectPage = ({title, description, tags, content, appUrl, docUrl, demoUrl, role}) => {
     return (
-        <div>
+        <div className='h-auto m-auto'>
             <h1 className="leading-10 text-4xl font-bold">{title}</h1>
             <h2 className="my-4 text-2xl font-bold">What is it about?</h2>
             <p className='text-xl'>{content}</p>
