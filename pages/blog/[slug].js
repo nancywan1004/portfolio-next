@@ -41,7 +41,7 @@ export default function Home({ postItem, postContent }) {
       </Head>
 
       <main className="max-w-4xl mx-auto mt-16 antialiased">
-        <div class="text-black dark:text-white">
+        <div class="px-4 text-black dark:text-white">
           <h1 className="leading-8 font-bold dark:font-bold">{postItem.title}</h1>
           <h2 className="leading-8 italic dark:italic">{postItem.date}</h2>
           {
