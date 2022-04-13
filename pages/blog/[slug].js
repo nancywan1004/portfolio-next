@@ -42,11 +42,11 @@ export default function Home({ postItem, postContent }) {
 
       <main className="max-w-4xl mx-auto mt-16 antialiased">
         <div class="px-4 text-black dark:text-white">
-          <h1 className="leading-8 font-bold dark:font-bold">{postItem.title}</h1>
-          <h2 className="leading-8 italic dark:italic">{postItem.date}</h2>
+          <h1 className="leading-8 font-bold dark:font-bold text-2xl">{postItem.title}</h1>
+          <h2 className="leading-8 italic dark:italic text-xl">{postItem.date}</h2>
           {
             postContent.map((paragraph, idx) => (
-              <div className="py-2 leading-6" key={idx}>{parse(paragraph.html)}</div>
+              <div className="py-2 leading-6 text-xl" key={idx}>{parse(paragraph.html)}</div>
             ))
           }
         </div>

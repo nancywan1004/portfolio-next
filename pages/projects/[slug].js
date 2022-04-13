@@ -39,7 +39,7 @@ export default function Home({ portfolioItem }) {
       </Head>
 
       <main className="max-w-4xl mx-auto mt-16 antialiased">
-        <div class="px-4 text-black dark:text-white">
+        <div class="flex px-4 text-black dark:text-white">
             <ProjectPage title={portfolioItem.title} description={portfolioItem.description} content={portfolioItem.content} 
             appUrl={portfolioItem.appUrl}
             docUrl={portfolioItem.docUrl} tags={portfolioItem.tags}
