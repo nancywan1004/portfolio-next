@@ -14,24 +14,19 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const postItem = await getPost(params.slug);
-  const content = await markdownToHtml(postItem[0].content || '');
+  console.log("postItem is: ", postItem[0].content)
+  // const content = await markdownToHtml(postItem[0].content[0].markdown || '');
+  // console.log("content is: ", content)
   return {
     props: {
       postItem: postItem[0],
-      postContent: content
+      postContent: postItem[0].content
     },
   };
 }
 
 export default function Home({ postItem, postContent }) {
   const router = useRouter();
-  //let postContentJSX = parse(postContent);
-  // if (Array.isArray(postContentJSX)) {
-  //   postContentJSX.forEach((elem) => {
-  //     console.log(elem)
-  //   })
-  // }
-  // console.log(postItem)
   if (!router.isFallback && !postItem?.slug) {
     return <ErrorPage statusCode={404} />
   }
@@ -47,9 +42,13 @@ export default function Home({ postItem, postContent }) {
 
       <main className="max-w-4xl mx-auto mt-16 antialiased">
         <div class="text-black dark:text-white">
-          <h1 className="font-bold dark:font-bold">{postItem.title}</h1>
-          <h2 className="italic dark:italic">{postItem.date}</h2>
-          <div>{parse(postContent)}</div>
+          <h1 className="leading-8 font-bold dark:font-bold">{postItem.title}</h1>
+          <h2 className="leading-8 italic dark:italic">{postItem.date}</h2>
+          {
+            postContent.map((paragraph, idx) => (
+              <div className="py-2 leading-6" key={idx}>{parse(paragraph.html)}</div>
+            ))
+          }
         </div>
       </main>
     </div>

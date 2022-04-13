@@ -1,6 +1,7 @@
 import Link from "next/link"
 import React from "react"
 import ThemeSwitch from "./ThemeSwitch";
+import { getAllFileIds } from "../lib/data";
 
 const Navigation = () => {
     return (
@@ -28,6 +29,13 @@ const Navigation = () => {
                             Projects
                         </a>
                     </Link>
+                    <a href="/api/getPDF">
+                        <a
+                            className={"font-medium tracking-wider transition-colors text-gray-900 hover:text-sky-500 uppercase dark:text-white"}
+                        >
+                            Resume
+                        </a>
+                    </a>
                     <ThemeSwitch />
                 </div>
             </div>

@@ -1,9 +1,9 @@
 import React from "react";
-import ProjectCard from '../components/ProjectCard'
+import ProjectCard from '../../components/ProjectCard'
 import Link from 'next/link'
-import { getPortfolioItems } from "../lib/data";
+import { getPortfolioItems } from "../../lib/data";
 import Head from 'next/head'
-import { useElementOnScreen } from '../lib/customHooks';
+import { useElementOnScreen } from '../../lib/customHooks';
 
 export async function getStaticProps() {
     const portfolioItems = await getPortfolioItems();
@@ -33,18 +33,17 @@ export default function Projects({ portfolioItems }) {
       {
         portfolioItems?.map(item => (
           <div ref={containerRef} key={item.slug} className="animate-fadeIn">
-            {/* <a href={item.url}> */}
+            <Link href={`/projects/${item.slug}`} passHref>
             <ProjectCard
             title={item.title}
             description={item.description}
             content={item.content}
             tags={item.tags}
             coverImage={item.coverImage}
-            url={item.url}
             startDate={item.startDate}
             endDate={item.endDate}
             />
-            {/* </a> */}
+            </Link>
           </div>
         ))
       }
