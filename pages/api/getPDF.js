@@ -11,7 +11,7 @@ const handler = async (req, res) => {
   if (!response.ok) throw new Error(`unexpected response ${response.statusText}`);
 
   res.setHeader('Content-Type', 'application/pdf');
-  res.setHeader('Content-Disposition', 'attachment; filename=Nancy(Leqi)_Wan_Resume_2022_.pdf');
+  res.setHeader('Content-Disposition', 'inline; filename=Nancy(Leqi)_Wan_Resume_2022_.pdf');
   await pipeline(response.body, res);
 };
 
