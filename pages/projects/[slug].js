@@ -1,9 +1,11 @@
+import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { getPortfolioItem } from "../../lib/data";
 import markdownToHtml from '../../lib/markdownToHtml';
 import ProjectPage from "../../components/ProjectPage";
+import Verification from "../../components/Verification";
 
 export async function getStaticPaths() {
   return {
@@ -23,6 +25,7 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Home({ portfolioItem }) {
+  const [isAccessible, setAccessible] = useState(portfolioItem?.passcode == null)
   const router = useRouter();
   if (!router.isFallback && !portfolioItem?.slug) {
     return <ErrorPage statusCode={404} />
@@ -40,10 +43,12 @@ export default function Home({ portfolioItem }) {
 
       <main className="max-w-4xl mx-auto mt-16 antialiased">
         <div className="flex px-4 text-black dark:text-white">
-            <ProjectPage title={portfolioItem.title} description={portfolioItem.description} content={portfolioItem.content} 
+          {
+            isAccessible === true ? <ProjectPage title={portfolioItem.title} description={portfolioItem.description} content={portfolioItem.content} 
             appUrl={portfolioItem.appUrl}
             docUrl={portfolioItem.docUrl} tags={portfolioItem.tags}
-            demoUrl={portfolioItem.demoUrl} role={portfolioItem.role}/>
+            demoUrl={portfolioItem.demoUrl} role={portfolioItem.role}/> : <Verification passcode={portfolioItem.passcode} allowAccess={() => {setAccessible(true)}}/>
+          }
         </div>
       </main>
     </div>
