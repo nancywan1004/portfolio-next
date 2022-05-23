@@ -26,7 +26,7 @@ export default function Projects({ portfolioItems }) {
     return (
       <div className="space-y-14 lg:space-y-24">
         <Head>
-          <title>Nancy's Portfolio</title>
+          <title>Projects</title>
         </Head>
       <main className="max-w-2xl mx-auto mt-16 antialiased">
       <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">

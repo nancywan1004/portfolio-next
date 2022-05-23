@@ -7,6 +7,8 @@ const VideoDemo = (props) => {
         <div>
         <ReactPlayer
           url={props.demoUrl}
+          width='100%'
+          height='100%'
         />
       </div>
     )
