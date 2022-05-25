@@ -15,7 +15,6 @@ export async function getStaticProps() {
 }
 
 export default function Posts({ postItems }) {
-    // console.log(postItems)
     const [ containerRef ] = useElementOnScreen({
       root: null,
       rootMargin: "0px",
