@@ -26,7 +26,7 @@ const ProjectPage = ({ title, description, tags, content, appUrl, docUrl, demoUr
             </div>
             <h2 className="my-4 text-2xl font-bold">Live Demo</h2>
             {
-                demoUrl ? null : <p className='text-xl'>Stay tuned!</p>
+                appUrl ? null : <p className='text-xl'>Stay tuned!</p>
             }
             <div className='flex justify-center'>
                 {demoUrl ? <VideoDemo demoUrl={demoUrl} /> : null}
