@@ -29,7 +29,7 @@ const Navigation = () => {
                             Projects
                         </a>
                     </Link>
-                    <a href="/api/getPDF">
+                    <a href="/api/resume">
                         <a
                             className={"font-medium tracking-wider transition-colors text-gray-900 hover:text-sky-500 uppercase dark:text-white"}
                         >
