@@ -14,7 +14,7 @@ const About = () => {
                     </h1>
                     <div className="mt-6 text-gray-800 dark:text-white">
                         <p className="mb-4 font-mono">
-                        A UBC Computer Science and Statistics graduate and a current Master of Digital Media student at Centre for Digital Media. A passionate <b>Web Developer</b> "sneaking into" <b>XR</b> hoping to create tools for the community to build a more immersive Web.
+                        A UBC Computer Science and Statistics and Master of Digital Media graduate. A passionate <b>Software Engineer</b> engaged in <b>XR</b> hoping to create tools to empower the immersive digital community.
                         </p>
                     </div>
                     <div className="mt-20">
