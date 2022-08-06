@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { getPost } from "../../lib/data";
 import markdownToHtml from '../../lib/markdownToHtml';
 import parse from 'html-react-parser';
+import ErrorPage from 'next/error'
 
 export async function getStaticPaths() {
   return {

@@ -30,7 +30,7 @@ export default function Projects({ portfolioItems }) {
       <main className="max-w-2xl mx-auto mt-16 antialiased">
       <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
       {
-        portfolioItems?.map(item => (
+        portfolioItems?.map((item) => (
           <div ref={containerRef} key={item.slug} className="animate-fadeIn">
             <Link href={`/projects/${item.slug}`} passHref>
             <ProjectCard
