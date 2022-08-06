@@ -15,7 +15,6 @@ export async function getStaticProps() {
 }
 
 export default function Projects({ portfolioItems }) {
-    //console.log(portfolioItems)
 
     const [ containerRef ] = useElementOnScreen({
       root: null,
