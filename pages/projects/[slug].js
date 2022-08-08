@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -31,6 +31,12 @@ export async function getStaticProps({ params }) {
 
 export default function Home({ portfolioItem, prevPortfolioItem, nextPortfolioItem }) {
   const [isAccessible, setAccessible] = useState(portfolioItem?.passcode == null)
+
+  useEffect(() => {
+    setAccessible(portfolioItem?.passcode == null)
+  }, [portfolioItem])
+
+  console.log(portfolioItem?.title + isAccessible)
   const router = useRouter();
   if (!router.isFallback && !portfolioItem?.slug) {
     return <ErrorPage statusCode={404} />
@@ -55,7 +61,7 @@ export default function Home({ portfolioItem, prevPortfolioItem, nextPortfolioIt
             demoUrl={portfolioItem?.demoUrl} role={portfolioItem?.role}
             prev={prevPortfolioItem?.slug} next={nextPortfolioItem?.slug}
             // setCurrPortfolioItem={setCurrPortfolioItem}
-            /> : <Verification passcode={portfolioItem.passcode} allowAccess={() => {setAccessible(true)}}/>
+            /> : <Verification passcode={portfolioItem.passcode} allowAccess={() => {setAccessible(true)}} title={portfolioItem?.title} prev={prevPortfolioItem?.slug} next={nextPortfolioItem?.slug}/>
           }
         </div>
       </main>
