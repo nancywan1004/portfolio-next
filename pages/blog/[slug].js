@@ -37,7 +37,7 @@ export default function Home({ postItem, postContent }) {
   return (
     <div className="space-y-14 lg:space-y-24">
       <Head>
-        <title>Nancy's Blog</title>
+        <title>Blog</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

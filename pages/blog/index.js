@@ -24,7 +24,7 @@ export default function Posts({ postItems }) {
     return (
       <div className="space-y-14 lg:space-y-24">
         <Head>
-          <title>Posts</title>
+          <title>Blog</title>
         </Head>
       <main className="max-w-4xl mx-auto mt-16 antialiased">
       <div>
