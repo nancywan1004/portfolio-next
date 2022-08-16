@@ -59,7 +59,7 @@ export default function Home({ portfolioItem, prevPortfolioItem, nextPortfolioIt
             appUrl={portfolioItem?.appUrl}
             docUrl={portfolioItem?.docUrl} tags={portfolioItem?.tags}
             demoUrl={portfolioItem?.demoUrl} role={portfolioItem?.role}
-            prev={prevPortfolioItem?.slug} next={nextPortfolioItem?.slug}
+            prev={`/projects/${prevPortfolioItem?.slug}`} next={`/projects/${nextPortfolioItem?.slug}`}
             // setCurrPortfolioItem={setCurrPortfolioItem}
             /> : <Verification passcode={portfolioItem.passcode} allowAccess={() => {setAccessible(true)}} title={portfolioItem?.title} prev={prevPortfolioItem?.slug} next={nextPortfolioItem?.slug}/>
           }

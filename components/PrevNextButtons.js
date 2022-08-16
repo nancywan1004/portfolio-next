@@ -2,7 +2,7 @@ import React from "react"
 import Link from 'next/link';
 
 const PrevButton = ({ prevSlug }) => {
-    if (!prevSlug) {
+    if (prevSlug.substring(prevSlug.lastIndexOf("/")+1) === 'undefined') {
         return (
             <button type="button" className="text-transparent rounded-r-md py-2 hover:border-l border-gray-300 px-3" disabled>
                 <div className="flex flex-row align-middle">
@@ -15,7 +15,7 @@ const PrevButton = ({ prevSlug }) => {
         )
     }
     return (
-        <Link href={`/projects/${prevSlug}`}>
+        <Link href={prevSlug}>
             <button type="button" className="text-black rounded-l-md hover:border-r border-gray-300 py-2 dark:text-white px-3">
                 <div className="flex flex-row align-middle">
                     <svg className="w-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +30,7 @@ const PrevButton = ({ prevSlug }) => {
 }
 
 const NextButton = ({ nextSlug }) => {
-    if (!nextSlug) {
+    if (nextSlug.substring(nextSlug.lastIndexOf("/")+1) === 'undefined') {
         return (
             <button type="button" className="text-transparent rounded-r-md py-2 hover:border-l border-gray-300 px-3" disabled>
                 <div className="flex flex-row align-middle">
@@ -43,7 +43,7 @@ const NextButton = ({ nextSlug }) => {
         )
     }
     return (
-        <Link href={`/projects/${nextSlug}`}>
+        <Link href={nextSlug}>
             <button type="button" className="text-black rounded-r-md py-2 hover:border-l border-gray-300 dark:text-white px-3">
 
                 <div className="flex flex-row align-middle">
