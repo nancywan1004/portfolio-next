@@ -2,7 +2,6 @@ import React from "react"
 import ReactPlayer from "react-player"
 
 const VideoDemo = (props) => {
-
     return (
         <div>
         <ReactPlayer
