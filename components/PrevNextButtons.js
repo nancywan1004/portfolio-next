@@ -2,7 +2,7 @@ import React from "react"
 import Link from 'next/link';
 
 const PrevButton = ({ prevSlug }) => {
-    if (prevSlug.substring(prevSlug.lastIndexOf("/")+1) === 'undefined') {
+    if (!prevSlug || prevSlug.substring(prevSlug.lastIndexOf("/")+1) === 'undefined') {
         return (
             <button type="button" className="text-transparent rounded-r-md py-2 hover:border-l border-gray-300 px-3" disabled>
                 <div className="flex flex-row align-middle">
@@ -30,7 +30,7 @@ const PrevButton = ({ prevSlug }) => {
 }
 
 const NextButton = ({ nextSlug }) => {
-    if (nextSlug.substring(nextSlug.lastIndexOf("/")+1) === 'undefined') {
+    if (!nextSlug || nextSlug.substring(nextSlug.lastIndexOf("/")+1) === 'undefined') {
         return (
             <button type="button" className="text-transparent rounded-r-md py-2 hover:border-l border-gray-300 px-3" disabled>
                 <div className="flex flex-row align-middle">
