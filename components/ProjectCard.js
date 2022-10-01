@@ -1,7 +1,7 @@
 import React from "react"
 import Image from "next/image"
 import Link from "next/link";
-import Date from "./Date";
+import Date from "./date";
 
 const ProjectCard = React.forwardRef(({href, onClick, title, description, tags, coverImage, startDate, endDate, content}, ref) => {
     return (
