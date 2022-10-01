@@ -16,7 +16,7 @@
   }
   
   .markdown h3 {
-    @apply italic text-2xl mt-8 mb-4 leading-snug;
+    @apply italic text-2xl mt-6 mb-2 leading-snug;
   }
   
   .markdown h4 {
