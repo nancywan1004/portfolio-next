@@ -43,7 +43,7 @@ specific business areas over time.
 
 **Software Developer Co-op, RBC** | `May - Aug 2020`
 * • Developed a full-stack middleware micro-service to manage chat-bot’s knowledge bases using **Stencil.js**
-and Node.js with reference to **Azure Cognitive Service** APIs and **AWS S3 storage**.
+and **Node.js** with reference to **Azure Cognitive Service** APIs and **AWS S3 storage**.
 * • Collaborated with UX and product owners to refine and create add-ons for internal websites and
 demonstrated proof-of-concepts to senior managers.
 
