@@ -1,0 +1,24 @@
+.markdown {
+    @apply text-lg leading-relaxed;
+  }
+  
+  .markdown ul
+  .markdown ol {
+    @apply my-6;
+  }
+
+  .markdown p {
+    @apply my-1
+  }
+  
+  .markdown h2 {
+    @apply text-3xl mt-12 mb-4 leading-snug;
+  }
+  
+  .markdown h3 {
+    @apply italic text-2xl mt-8 mb-4 leading-snug;
+  }
+  
+  .markdown h4 {
+    @apply text-xl mt-6 mb-3 leading-snug;
+  }
