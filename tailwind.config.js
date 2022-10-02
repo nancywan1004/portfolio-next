@@ -23,10 +23,24 @@ module.exports = {
           }
         }
       }, 
+      type: {
+        '0%': { transform: 'translateX(0ch)' },
+        '5%, 10%': { transform: 'translateX(1ch)' },
+        '15%, 20%': { transform: 'translateX(2ch)' },
+        '25%, 30%': { transform: 'translateX(3ch)' },
+        '35%, 40%': { transform: 'translateX(4ch)' },
+        '45%, 50%': { transform: 'translateX(5ch)' },
+        '55%, 60%': { transform: 'translateX(6ch)' },
+        '65%, 70%': { transform: 'translateX(6.5ch)' },
+        '75%, 80%': { transform: 'translateX(6.5ch)' },
+        '85%, 90%': { transform: 'translateX(6.5ch)' },
+        '95%, 100%': { transform: 'translateX(6.5ch)' },
+      },
     },
     animation: {
       fadeIn: 'fadeIn 0.5s ease-in forwards',
-      slideInFromLeft: '1s ease-out 0s 1 slideInFromLeft'
+      slideInFromLeft: '1s ease-out 0s 1 slideInFromLeft',
+      type: 'type 2.5s ease-out .5s normal both',
     }
   }
   },

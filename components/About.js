@@ -3,6 +3,7 @@ import Image from "next/image"
 import profile from "../public/profile.jpg"
 import Skills from "./Skills";
 import Link from 'next/link';
+import cursorStyles from './cursor.module.css'
 
 const About = () => {
     return (
@@ -10,11 +11,19 @@ const About = () => {
             <div className="lg:space-x-5 lg:flex lg:flex-row item-center lg:-mx-4 flex flex-col-reverse text-center lg:text-left">
                 <div className="lg:px-4 lg:mt-12 ">
                     <h1 className="text-2xl font-bold text-gray-900 lg:text-5xl dark:text-white">
-                        Hey there, I'm Nancy :)
+                        hey there, I&apos;m <br className="block md:hidden" />
+                        <span className="relative">
+                            <span className="h-auto overflow-x-hidden whitespace-nowrap">
+                                nancy :)
+                            </span>
+                            <span
+                                className={`${cursorStyles["cursor"]} absolute -bottom-0 left-0 -top-0.5 inline-block bg-white dark:bg-[#121212] w-full animate-type will-change`}
+                            ></span>
+                        </span>
                     </h1>
                     <div className="mt-6 text-gray-800 dark:text-white">
                         <p className="mb-4 font-mono">
-                        A UBC Computer Science and Statistics and Master of Digital Media graduate. A passionate <b>Software Engineer</b> engaged in <b>XR</b> hoping to create tools to empower the immersive digital community.
+                            A UBC Computer Science and Statistics and Master of Digital Media graduate. A passionate <b>Software Engineer</b> engaged in <b>XR</b> hoping to create tools to empower the immersive digital community.
                         </p>
                     </div>
                     <div className="mt-20">
@@ -39,8 +48,8 @@ const About = () => {
                         height={250}
                         placeholder="blur"
                     />
-                    <Skills 
-                    
+                    <Skills
+
                     />
                 </div>
             </div>

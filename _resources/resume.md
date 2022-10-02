@@ -67,7 +67,7 @@ prefetched resources data from **GraphCMS**.
 
 
 **Concert With Friends - ReactJS, Node.js, MongoDB** | `May - Aug 2021`
-- • Implemented user sign-up/login, profile editing with **Redux** store for user state management, and endto-end join/leave group features.
+- • Implemented user sign-up/login, profile editing with **Redux** store for user state management, and end-to-end join/leave group features.
 
 
 ### Education
