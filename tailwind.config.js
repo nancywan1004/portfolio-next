@@ -31,16 +31,15 @@ module.exports = {
         '35%, 40%': { transform: 'translateX(4ch)' },
         '45%, 50%': { transform: 'translateX(5ch)' },
         '55%, 60%': { transform: 'translateX(6ch)' },
-        '65%, 70%': { transform: 'translateX(6.5ch)' },
-        '75%, 80%': { transform: 'translateX(6.5ch)' },
-        '85%, 90%': { transform: 'translateX(6.5ch)' },
-        '95%, 100%': { transform: 'translateX(6.5ch)' },
+        '65%, 70%': { transform: 'translateX(7ch)' },
+        '75%, 80%': { transform: 'translateX(7ch)' },
+        '85%, 90%, 95%, 100%': { transform: 'translateX(7ch)' }
       },
     },
     animation: {
       fadeIn: 'fadeIn 0.5s ease-in forwards',
       slideInFromLeft: '1s ease-out 0s 1 slideInFromLeft',
-      type: 'type 2.5s ease-out .5s normal both',
+      type: 'type 3.0s ease-out .5s 1 forwards',
     }
   }
   },
