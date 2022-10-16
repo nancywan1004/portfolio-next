@@ -16,12 +16,12 @@ const Navigation = () => {
                 </Link>
                 <div className="flex flex-wrap pt-2 sm:space-x-4 space-x-2 font-medium lg:pt-0">
                     <Link href="/blog">
-                            <a
-                                className={"font-medium tracking-wider transition-colors text-gray-900 hover:text-sky-500 uppercase dark:text-white"}
-                            >
-                                Blog
-                            </a>
-                        </Link>
+                        <a
+                            className={"font-medium tracking-wider transition-colors text-gray-900 hover:text-sky-500 uppercase dark:text-white"}
+                        >
+                            Blog
+                        </a>
+                    </Link>
                     <Link href="/projects">
                         <a
                             className={"font-medium tracking-wider transition-colors text-gray-900 hover:text-sky-500 uppercase dark:text-white"}
@@ -29,13 +29,18 @@ const Navigation = () => {
                             Projects
                         </a>
                     </Link>
-                    <Link href="/resume">
+                    <div>                    
+                        <Link href="/api/resume" className="peer">
                         <a
                             className={"font-medium tracking-wider transition-colors text-gray-900 hover:text-sky-500 uppercase dark:text-white"}
                         >
                             Resume
                         </a>
                     </Link>
+                        {/* <div className="hidden peer-hover:flex hover:flex w-[200px] flex-col bg-white drop-shadow-lg">
+                            <a className="px-5 py-3 hover:bg-gray-200" href="#">About Us</a>
+                        </div> */}
+                    </div>
                     <ThemeSwitch />
                 </div>
             </div>
