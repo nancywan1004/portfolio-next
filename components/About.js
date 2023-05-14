@@ -3,7 +3,7 @@ import Image from "next/image"
 import profile from "../public/profile.jpg"
 import Skills from "./Skills";
 import Link from 'next/link';
-import cursorStyles from './cursor.module.css'
+import cursorStyles from '../styles/cursor.module.css'
 
 const About = () => {
     return (
