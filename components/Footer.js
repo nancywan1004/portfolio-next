@@ -10,7 +10,7 @@ const Footer = () => {
                     <div className="flex flex-wrap pt-2 sm:space-x-4 space-x-2 font-medium lg:pt-0">
                         <a
                             href="https://twitter.com/nancywan1004"
-                            className={"transition-colors hover:text-yellow-500"}
+                            className={"transition-colors hover:text-yellow-500 dark:hover:text-blue-500"}
                             target="_blank"
                             rel="noreferrer"
                         >
@@ -18,7 +18,7 @@ const Footer = () => {
                         </a>
                         <a
                             href="https://www.linkedin.com/in/leqi-nancy-wan-a52b37142/"
-                            className={"transition-colors hover:text-yellow-500"}
+                            className={"transition-colors hover:text-yellow-500 dark:hover:text-blue-500"}
                             target="_blank"
                             rel="noreferrer"
                         >
@@ -26,7 +26,7 @@ const Footer = () => {
                         </a>
                         <a
                             href="https://github.com/nancywan1004"
-                            className={"transition-colors hover:text-yellow-500"}
+                            className={"transition-colors hover:text-yellow-500 dark:hover:text-blue-500"}
                             target="_blank"
                             rel="noreferrer"
                         >

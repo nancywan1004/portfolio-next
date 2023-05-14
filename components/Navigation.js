@@ -9,7 +9,7 @@ const Navigation = () => {
             <div className="px-4 mx-auto lg:max-w-4xl flex items-center justify-between">
                 <Link href="/">
                     <a
-                        className={"font-medium tracking-wider transition-colors text-gray-900 hover:text-sky-500 uppercase dark:text-white"}
+                        className={"font-medium tracking-wider transition-colors text-gray-900 hover:text-yellow-500 uppercase dark:text-white dark:hover:text-blue-500"}
                     >
                         Nancy Wan
                     </a>
@@ -17,14 +17,14 @@ const Navigation = () => {
                 <div className="flex flex-wrap pt-2 sm:space-x-4 space-x-2 font-medium lg:pt-0">
                     <Link href="/blog">
                         <a
-                            className={"font-medium tracking-wider transition-colors text-gray-900 hover:text-sky-500 uppercase dark:text-white"}
+                            className={"font-medium tracking-wider transition-colors text-gray-900 hover:text-yellow-500 uppercase dark:text-white dark:hover:text-blue-500"}
                         >
                             Blog
                         </a>
                     </Link>
                     <Link href="/projects">
                         <a
-                            className={"font-medium tracking-wider transition-colors text-gray-900 hover:text-sky-500 uppercase dark:text-white"}
+                            className={"font-medium tracking-wider transition-colors text-gray-900 hover:text-yellow-500 uppercase dark:text-white dark:hover:text-blue-500"}
                         >
                             Projects
                         </a>
@@ -32,7 +32,7 @@ const Navigation = () => {
                     <div>                    
                         <Link href="/api/resume" className="peer">
                         <a
-                            className={"font-medium tracking-wider transition-colors text-gray-900 hover:text-sky-500 uppercase dark:text-white"}
+                            className={"font-medium tracking-wider transition-colors text-gray-900 hover:text-yellow-500 uppercase dark:text-white dark:hover:text-blue-500"}
                         >
                             Resume
                         </a>

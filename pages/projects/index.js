@@ -33,15 +33,15 @@ export default function Projects({ portfolioItems }) {
         portfolioItems?.map((item) => (
           <div ref={containerRef} key={item.slug} className="animate-fadeIn">
             <Link href={`/projects/${item.slug}`} passHref>
-            <ProjectCard
-            title={item.title}
-            description={item.description}
-            content={item.content}
-            tags={item.tags}
-            coverImage={item.coverImage}
-            startDate={item.startDate}
-            endDate={item.endDate}
-            />
+              <ProjectCard
+              title={item.title}
+              description={item.description}
+              content={item.content}
+              tags={item.tags}
+              coverImage={item.coverImage}
+              startDate={item.startDate}
+              endDate={item.endDate}
+              />
             </Link>
           </div>
         ))

@@ -53,8 +53,11 @@ const ProjectPage = (props) => {
                 </div> : null
             }
 
-            <h2 className="my-4 text-2xl font-bold">Official Documentation</h2>
-            <p className='text-xl'>Read the <a href={docUrl} className="underline text-blue-600 font-bold">full documentation</a>📋</p>
+            {
+                docUrl ? <div><h2 className="my-4 text-2xl font-bold">Official Documentation</h2>
+                <p className='text-xl'>Read the <a href={docUrl} className="underline text-blue-600 font-bold">full documentation</a>📋</p>
+                </div> : null
+            }
 
             {/* <div class="bg-gray-200 max-w-lg p-36 container flex justify-center mx-auto"> */}
             <div class="mt-10 flex flex-row justify-between mx-auto">

@@ -5,7 +5,7 @@ import Date from "./date";
 
 const ProjectCard = React.forwardRef(({href, onClick, title, description, tags, coverImage, startDate, endDate, content}, ref) => {
     return (
-        <div class="overflow-hidden shadow-lg rounded-lg h-auto w-80 md:w-80 cursor-pointer m-auto p-4 bg-amber-600 transition duration-500 ease-in-out transform hover:shadow-2xl dark:bg-gray-900">
+        <div class="shadow-lg rounded-lg h-fit w-80 md:w-80 cursor-pointer m-auto p-4 bg-amber-600 transition duration-500 ease-in-out transform hover:shadow-2xl dark:bg-gray-900">
             <a class="w-full block max-h-full">
                 <img alt="cover image" src={coverImage?.url} class="h-40 w-full object-cover"/>
                 <div class="w-full">

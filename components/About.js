@@ -23,7 +23,7 @@ const About = () => {
                     </h1>
                     <div className="mt-6 text-gray-800 dark:text-white">
                         <p className="mb-4 font-mono">
-                            A UBC Computer Science and Statistics and Master of Digital Media graduate. A passionate <b>Software Engineer</b> engaged in <b>XR</b> hoping to create tools to empower the immersive digital community.
+                            Tools, System & XR Content Developer at <a href="https://www.yumebau.com/" className="font-bold hover:text-yellow-500 dark:hover:text-blue-500">Yumebau Inc</a>. <br /> UBC Computer Science & Statistics and Master of Digital Media. <br /> A passionate <b>Software Engineer</b> engaged in <b>XR</b> hoping to create tools and system to empower the immersive digital community.
                         </p>
                     </div>
                     <div className="mt-20">
