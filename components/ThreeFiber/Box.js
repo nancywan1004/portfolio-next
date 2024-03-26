@@ -1,15 +1,15 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Canvas, useThree, useFrame } from '@react-three/fiber';
 import { Html, OrbitControls } from '@react-three/drei';
 import { Vector2, Raycaster, Vector3, Quaternion } from 'three';
+import { Button } from 'antd';
 
 const Box = ({position, rotation}) => {
     const [size, set] = useState(0.5)
     const boxRef = useRef();
-
-    const targetQuaternion = useRef(null);
-    const lerping = useRef(false);
-  
+    const [isAnimating, setIsAnimating] = useState(true);
+    const [targetQuaternion, setTargetQuaternion] = useState(null);
+    const [lerping, setLerping] = useState(false);
     const raycaster = useRef(new Raycaster());
 
     const handleFaceClick = (e) => {
@@ -33,48 +33,64 @@ const Box = ({position, rotation}) => {
         const rotation = new Quaternion().setFromUnitVectors(new Vector3(0, 0, 1), direction);
   
         // Set the target rotation for lerping
-        targetQuaternion.current = rotation;
-  
-        // Start lerping if not already lerping
-        if (!lerping.current) {
-          lerping.current = true;
-        }
+        setTargetQuaternion(rotation);
+
+        // Start lerping
+        setLerping(true);
       }
     };
   
     useFrame(() => {
       // If lerping, interpolate between the current rotation and the target rotation
-      if (lerping.current && targetQuaternion.current !== null) {
+      if (lerping && targetQuaternion !== null) {
         // Calculate the lerped rotation
-        const lerpedRotation = new Quaternion().copy(boxRef.current.quaternion).slerp(targetQuaternion.current, 0.1);
+        const lerpedRotation = new Quaternion().copy(boxRef.current.quaternion).slerp(targetQuaternion, 0.1);
   
         // Update the rotation of the box
         boxRef.current.setRotationFromQuaternion(lerpedRotation);
   
         // If the rotation is close enough to the target rotation, stop lerping
-        if (boxRef.current.quaternion.equals(targetQuaternion.current)) {
-          lerping.current = false;
-          targetQuaternion.current = null;
+        if (boxRef.current.quaternion.equals(targetQuaternion)) {
+          setLerping(false);
+          setTargetQuaternion(null);
         }
       }
     });
+
+    // // Define the animation loop using useFrame hook
+    // useFrame((state, delta) => {
+    //   // Rotate the box mesh around the Y-axis if animation is still active
+    //   if (isAnimating) {
+    //     boxRef.current.rotation.y += 0.5 * delta; // Adjust the speed of rotation as needed
+    //   }
+    // });
+  
+    // // Stop the animation after 3 seconds
+    // useEffect(() => {
+    //   const timer = setTimeout(() => {
+    //     setIsAnimating(false);
+    //   }, 3000);
+  
+    //   return () => clearTimeout(timer);
+    // }, []);
 
     return (
       <mesh
       position={position}
       rotation={rotation}
-      scale={size * 1.5}
+      scale={size * 2}
       ref={boxRef}
       onClick={handleFaceClick}>
-        <boxGeometry attach="geometry" args={[1, 1, 1]}/>
+        <boxGeometry attach="geometry"/>
         <shaderMaterial attach="material" vertexShader={vertexShader} fragmentShader={fragmentShader} />
-        {/* <Html occlude distanceFactor={1.5} position={[0, 0, 0.51]} transform>
-        <div className="mt-6 text-gray-800 dark:text-white">
+        <Html occlude distanceFactor={1.5} position={[0, 0, 0.51]} transform>
+          <Button>Go to Projects!</Button>
+        {/* <div className="mt-6 text-gray-800 dark:text-white">
             <p className="mb-4 font-mono">
                 Tools, System & XR Content Developer at <a href="https://www.yumebau.com/" className="font-bold hover:text-yellow-500 dark:hover:text-blue-500">Yumebau Inc</a>. <br /> UBC Computer Science & Statistics and Master of Digital Media. <br /> A passionate <b>Software Engineer</b> engaged in <b>XR</b> hoping to create tools and system to empower the immersive digital community.
             </p>
-        </div>
-      </Html> */}
+        </div> */}
+      </Html>
       </mesh>
     )
   }
